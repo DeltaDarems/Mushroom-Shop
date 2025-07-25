@@ -19,6 +19,7 @@ public class Hello {
 		int choices;
 		boolean isRunning = true;
 		int x = 0;
+		int sample = 0;
 		
 		while (isRunning == true && x == 0) {
 	 		welcomeMenu();
@@ -26,17 +27,16 @@ public class Hello {
 				
 		choices = scan.nextInt();
 		switch (choices) {
-			case 1:
-					mushroomAvail();
-				break;
-			case 2: System.out.println("Shopping cart:");
-					shoppingCart();
-				break;
-			case 3: 
-				System.out.println("Program ended");
-				isRunning = false;
-				break;
-			default: System.out.println("Invalid choice");
+			case 1 -> mushroomAvail();
+			case 2 -> {
+                            System.out.println("Shopping cart:");
+                            shoppingCart();
+                        }
+			case 3 -> {
+                            System.out.println("Program ended");
+                            isRunning = false;
+                        }
+			default -> System.out.println("Invalid choice");
 					}
 		
 		}
